@@ -1,4 +1,5 @@
 const http = require('http');
+const os= require('os');
 
 const server = http.createServer((request, response) => {
     response.writeHead(200, {"Content-Type": "text/plain"});
@@ -9,3 +10,4 @@ const port = process.env.PORT || 1337;
 server.listen(port);
 
 console.log("Server running at http://localhost:%d", port);
+console.log(`Node ${process.version} / ${os.version}`);
