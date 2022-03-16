@@ -9,5 +9,5 @@ const server = http.createServer((request, response) => {
 const port = process.env.PORT || 1337;
 server.listen(port);
 
-console.log("Server running at http://localhost:%d", port);
+console.log(`Server running at http://localhost:${port} on ${os.hostname}`);
 console.log(`Node ${process.version} / ${os.platform} / ${os.type} / ${os.version} / ${os.release}`);
